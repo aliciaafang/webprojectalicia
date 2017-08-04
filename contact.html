@@ -1,0 +1,313 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/animate/animate.css" />
+        <link rel="stylesheet" href="assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+	
+	<div class="main_menu_bg">
+                <div class="container"> 
+                    <div class="row">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="bbb" href="#"><img src="bbb.png" alt="" /></a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                    
+                                </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container-fluid -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+	
+        <section id="welcome" class="welcome">
+            <div class="slider_overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_slider text-center">
+                            <div class="col-md-12">
+                                <div class="main_slider_content wow zoomIn" data-wow-duration="1s">
+             
+									<body background = "st.jpg">
+                                    
+									
+									<center>
+									<form name="contact">
+									<font color = black>
+            <table width="225" cellpadding="4">
+            
+			
+			<script language="JavaScript">
+       function newCol(value) {
+            var element = document.createElement("td")
+            element.innerHTML = value
+            return element
+        }
+
+        function newRow(nama, alamat, telepon) {
+			// tambahkan tr baru dan td baru
+			var tr = document.createElement("tr")
+			tr.appendChild(newCol(nama))
+			td = document.createElement("td")
+			tr.appendChild(newCol(alamat))
+			td = document.createElement("td")
+			tr.appendChild(newCol(telepon))
+
+            // tambahkan tombol
+            td = document.createElement("td")
+            var edit = document.createElement("button")
+            edit.setAttribute("class", "btn btn-default")
+            edit.innerHTML = "Edit"
+            td.appendChild(edit)
+            edit.onclick = function() { editData(tr) }
+
+            var hapus = document.createElement("button")
+            hapus.innerHTML = "Hapus"
+            hapus.setAttribute("class", "btn btn-default")
+            td.appendChild(hapus)
+            hapus.onclick = function() { hapusData(tr) }
+
+            tr.appendChild(td)
+
+            return tr
+        }
+
+        function hapusData(element) {
+            if (confirm("Yakin Hapus?"))
+                element.remove()
+        }
+
+        function resetForm() {
+            document.querySelector("form").reset()
+            document.querySelector("#btnUpdate").style.display = "none"
+            document.querySelector("#nama").focus()
+        }
+
+        function editData(element) {
+			var nama = document.querySelector("#nama")
+			var alamat = document.querySelector("#alamat")
+			var telepon = document.querySelector('#telepon')
+
+            children = element.querySelectorAll("td")
+            nama.value = children[0].innerHTML
+            alamat.value = children[1].innerHTML
+            telepon.value = children[2].innerHTML
+
+            nama.focus()
+
+            var btnUpdate = document.querySelector("#btnUpdate")
+            btnUpdate.style.display = "inline"
+            btnUpdate.onclick = function() { updateData(element) }
+        }
+
+        function updateData(element) {
+			var nama = document.querySelector("#nama").value
+			var alamat = document.querySelector("#alamat").value
+			var telepon = document.querySelector('#telepon').value
+
+            tr = newRow(nama, alamat, telepon)
+
+            table = document.querySelector("#kontak")
+			table.querySelector("tbody").replaceChild(tr, element)
+
+            resetForm()
+        }
+
+		function tambahData() {
+			// baca input
+			var nama = document.querySelector("#nama").value
+			var alamat = document.querySelector("#alamat").value
+			var telepon = document.querySelector('#telepon').value
+
+            tr = newRow(nama, alamat, telepon)
+			
+			// insert ke table
+			var table = document.querySelector("#kontak")
+			table.querySelector("tbody").appendChild(tr)
+
+            resetForm()
+		}
+        </script>
+									
+									
+									
+                                </div>
+                            </div>	
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+<body>
+    <div class="container-fluid">
+        <h1>Contact</h1>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-12 col-md-2 control-label">Nama</label>
+                <div class="col-sm-12 col-md-10">
+                    <input type="text" id="nama" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-12 col-md-2 control-label">Alamat</label>
+                <div class="col-sm-12 col-md-10">
+                <input type="text" id="alamat" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-12 col-md-2 control-label">Telepon</label>
+                <div class="col-sm-12 col-md-10">
+                <input type="text" id="telepon" class="form-control">
+                </div>
+            </div>
+            <div class="pull-right">
+                <button onclick="tambahData()" class="btn btn-primary" type="button">Tambah</button>
+                <button class="btn btn-primary" type="button" style="display: none" id="btnUpdate">Update</button>
+                <button class="btn btn-default" type="button" onclick="resetForm()">Cancel</button>
+				
+            </div>
+        </form>
+        <table id="kontak" class="table">
+        <thead>
+            <tr>
+                <td>Nama</td>
+                <td>Alamat</td>
+                <td>Telepon</td>
+                <td>Action</td>
+            </tr>
+
+        </thead>
+        <tbody>		
+        </tbody>
+        </table>
+    </div>
+	<script>
+        function newCol(value) {
+            var element = document.createElement("td")
+            element.innerHTML = value
+            return element
+        }
+
+        function newRow(nama, alamat, telepon) {
+			// tambahkan tr baru dan td baru
+			var tr = document.createElement("tr")
+			tr.appendChild(newCol(nama))
+			td = document.createElement("td")
+			tr.appendChild(newCol(alamat))
+			td = document.createElement("td")
+			tr.appendChild(newCol(telepon))
+
+            // tambahkan tombol
+            td = document.createElement("td")
+            var edit = document.createElement("button")
+            edit.setAttribute("class", "btn btn-default")
+            edit.innerHTML = "Edit"
+            td.appendChild(edit)
+            edit.onclick = function() { editData(tr) }
+
+            var hapus = document.createElement("button")
+            hapus.innerHTML = "Hapus"
+            hapus.setAttribute("class", "btn btn-default")
+            td.appendChild(hapus)
+            hapus.onclick = function() { hapusData(tr) }
+
+            tr.appendChild(td)
+
+            return tr
+        }
+
+        function hapusData(element) {
+            if (confirm("Yakin Hapus?"))
+                element.remove()
+        }
+
+        function resetForm() {
+            document.querySelector("form").reset()
+            document.querySelector("#btnUpdate").style.display = "none"
+            document.querySelector("#nama").focus()
+        }
+
+        function editData(element) {
+			var nama = document.querySelector("#nama")
+			var alamat = document.querySelector("#alamat")
+			var telepon = document.querySelector('#telepon')
+
+            children = element.querySelectorAll("td")
+            nama.value = children[0].innerHTML
+            alamat.value = children[1].innerHTML
+            telepon.value = children[2].innerHTML
+
+            nama.focus()
+
+            var btnUpdate = document.querySelector("#btnUpdate")
+            btnUpdate.style.display = "inline"
+            btnUpdate.onclick = function() { updateData(element) }
+        }
+
+        function updateData(element) {
+			var nama = document.querySelector("#nama").value
+			var alamat = document.querySelector("#alamat").value
+			var telepon = document.querySelector('#telepon').value
+
+            tr = newRow(nama, alamat, telepon)
+
+            table = document.querySelector("#kontak")
+			table.querySelector("tbody").replaceChild(tr, element)
+
+            resetForm()
+        }
+
+		function tambahData() {
+			// baca input
+			var nama = document.querySelector("#nama").value
+			var alamat = document.querySelector("#alamat").value
+			var telepon = document.querySelector('#telepon').value
+
+            tr = newRow(nama, alamat, telepon)
+			
+			// insert ke table
+			var table = document.querySelector("#kontak")
+			table.querySelector("tbody").appendChild(tr)
+
+            resetForm()
+		}
+	</script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
